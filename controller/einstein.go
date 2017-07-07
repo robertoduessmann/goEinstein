@@ -9,6 +9,10 @@ import (
 	"github.com/gorilla/mux"
 )
 
+func Equation(w http.ResponseWriter, r *http.Request) {
+	fmt.Fprintf(w, "E=mc2")
+}
+
 func Energy(w http.ResponseWriter, r *http.Request) {
 	mass := getMass(r)
 	fmt.Fprintf(w, "%f", calculate(mass))

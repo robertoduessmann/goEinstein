@@ -10,6 +10,7 @@ import (
 
 func main() {
 	route := mux.NewRouter()
+	route.Path("/einsten").Methods(http.MethodGet).HandlerFunc(controller.Equation)
 	route.Path("/einsten/{mass}").Methods(http.MethodGet).HandlerFunc(controller.Energy)
 
 	if err := http.ListenAndServe(":3000", route); err != nil {
