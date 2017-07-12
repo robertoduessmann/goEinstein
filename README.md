@@ -12,5 +12,14 @@ go build
 ```
 ## Usage
 ```sh
-curl localhost:3000/einsten/5
+curl http://localhost:3000/einsten/{mass}
+```
+## Example
+#### Request
+```sh
+curl http://localhost:3000/einsten/5
+```
+#### Response
+```sh
+450000000000000000.000000
 ```
